@@ -5,6 +5,7 @@ const buttomCalculate = document.querySelector(".calculate");
 const result = document.querySelector(".changeAndView__moneyValue");
 
 let currentValue = 0;
+let total = 0;
 
 coinSelect.addEventListener("change", API);
 coinSelect.addEventListener("change", UpdateSig);
@@ -54,20 +55,21 @@ function ChangeText(value) {
 
 function Calculator(event) {
     if (event.key == "Enter" || event.pointerId == 1) {
-        let result = inputValue / currentValue;
+        total = inputValue.value / currentValue;
+        UpdateSig();
     }
 }
 
 function UpdateSig() {
     switch (coinSelect.value) {
         case "Dolar":
-            result.textContent = "US$ 0,00";
+            result.textContent = `US$ ${total.toFixed(2)}`;
             break;
         case "Real":
-            result.textContent = "R$ 0,00";
+            result.textContent = `R$ ${total.toFixed(2)}`;
             break;
         case "Euro":
-            result.textContent = "EUR 0,00";
+            result.textContent = `EUR ${total.toFixed(2)}`;
             break;
         default:
             console.error("Moeda não definida !");
