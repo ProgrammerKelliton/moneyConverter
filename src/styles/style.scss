@@ -1,0 +1,107 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: white;
+}
+
+body {
+    @include flex();
+    height: 100vh;
+}
+
+.box {
+    background-image: linear-gradient(95deg, #749bf1, #85a8f4c8);
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.box {
+    width: clamp(300px, 80vw, 400px);
+    padding: 30px 0px;
+}
+
+.viewValue__currentMoneyValue,
+.changeAndView__moneyValue,
+.enterValue__realValue {
+    color: white;
+    line-height: 2em;
+}
+
+.changeAndView__moneyValue {
+    font-size: xx-large;
+}
+
+.enterValue__inputRealValue {
+    padding: 10px;
+}
+
+.enterValue__inputRealValue {
+    border-radius: 12px;
+    border-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.changeAndView__coins {
+    border-color: transparent;
+    background-color: transparent;
+    color: white;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.changeAndView__coins {
+    margin-left: 10px;
+}
+
+.changeAndView {
+    @include flex();
+    justify-content: center;
+}
+
+.enterValue {
+    @include flex();
+    gap: 7px;
+}
+
+.changeAndView__coin {
+    color: black;
+}
+
+.calculate__icon {
+    width: 10px;
+}
+
+.calculate {
+    background-color: white;
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+            rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+        background-image: radial-gradient(#749bf1, #85a8f4c8);
+    }
+}
+
+.calculate {
+    @include flex();
+    padding: 10px 13px;
+}

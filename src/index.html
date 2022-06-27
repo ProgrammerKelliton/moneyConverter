@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="description" content="Conversor de moedas">
+</head>
+
+<body>
+    <main class="box">
+        <div class="viewValue">
+            <span class="viewValue__currentMoneyValue">Dolar hoje: R$5,00</span>
+        </div>
+
+        <div class="changeAndView">
+            <span class="changeAndView__moneyValue">US$ 0,00</span>
+
+            <select class="changeAndView__coins" id="coin">
+                <option class="changeAndView__coin" value="Dolar" selected>US$</option>
+                <option class="changeAndView__coin" value="Real">R$</option>
+                <option class="changeAndView__coin" value="CAD">CAD</option>
+            </select>
+        </div>
+
+        <div class="changeAndView">
+            <span class="changeAndView__moneyValue">US$ 0,00</span>
+
+            <select class="changeAndView__coins" id="coin">
+                <option class="changeAndView__coin" value="Dolar" selected>US$</option>
+                <option class="changeAndView__coin" value="Real">R$</option>
+                <option class="changeAndView__coin" value="CAD">CAD</option>
+            </select>
+        </div>
+
+        <div class="enterValue">
+            <label for="value" class="enterValue__realValue">R$</label>
+            <input type="number" id="value" class="enterValue__inputRealValue" placeholder="Digite o valor em reais"
+                title="Digite o valor em reais" autofocus>
+
+            <div class="calculate">
+                <img src="./assets/arrowIcon.svg" alt="Icon arrow" class="calculate__icon">
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/index.js" defer></script>
+</body>
+
+</html>
