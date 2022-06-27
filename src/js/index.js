@@ -1,3 +1,5 @@
+const url = "https://economia.awesomeapi.com.br/last/USD-BRL";
+
 const coinSelect = document.getElementById("coin");
 const nameCoin = document.querySelector(".viewValue__currentMoneyValue");
 const sigCoin = document.querySelector(".changeAndView__moneyValue");
