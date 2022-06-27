@@ -4,11 +4,12 @@ const inputValue = document.getElementById("value");
 const buttomCalculate = document.querySelector(".calculate");
 const result = document.querySelector(".changeAndView__moneyValue");
 
-let currentValue = 0;
-let total = 0;
+let currentValue = 0; // Valor atual da moeda selecionada
+let total = 0; // Valor após conversão
 
-coinSelect.addEventListener("change", API);
-coinSelect.addEventListener("change", UpdateSig);
+coinSelect.addEventListener("change", API); // Atualiza API
+coinSelect.addEventListener("change", UpdateSig); // Atualiza representação de moedas
+
 buttomCalculate.addEventListener("click", Calculator);
 window.addEventListener("keyup", Calculator);
 
