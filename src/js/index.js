@@ -7,6 +7,8 @@ const result = document.querySelector(".changeAndView__moneyValue");
 let currentValue = 0; // Valor atual da moeda selecionada
 let total = 0; // Valor após conversão
 
+let valueMaxInput = 10000000000;
+
 coinSelect.addEventListener("change", API); // Atualiza API
 coinSelect.addEventListener("change", UpdateSig); // Atualiza representação de moedas
 
@@ -56,7 +58,15 @@ function ChangeText(value) {
 
 function Calculator(event) {
     if (event.key == "Enter" || event.pointerId == 1) {
-        total = inputValue.value / currentValue;
+        if (coinSelect.value == "Real") {
+            total = inputValue.value;
+        } else {
+            total = inputValue.value / currentValue;
+            total = total.toFixed(2);
+        }
+        if (total >= valueMaxInput) {
+            result.style.fontSize = "1.5vw";
+        }
         UpdateSig();
     }
 }
@@ -64,13 +74,13 @@ function Calculator(event) {
 function UpdateSig() {
     switch (coinSelect.value) {
         case "Dolar":
-            result.textContent = `US$ ${total.toFixed(2)}`;
+            result.textContent = `US$ ${total}`;
             break;
         case "Real":
-            result.textContent = `R$ ${total.toFixed(2)}`;
+            result.textContent = `R$ ${total}`;
             break;
         case "Euro":
-            result.textContent = `EUR ${total.toFixed(2)}`;
+            result.textContent = `EUR ${total}`;
             break;
         default:
             console.error("Moeda não definida !");
