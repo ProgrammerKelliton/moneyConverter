@@ -84,26 +84,6 @@ body {
   color: black;
 }
 
-.calculate__icon {
-  width: 10px;
-}
-
-.calculate {
-  background-color: white;
-  border-radius: 5px;
-}
-.calculate:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  background-image: radial-gradient(#749bf1, rgba(133, 168, 244, 0.7843137255));
-}
-
-.calculate {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 13px;
-}
-
 @-webkit-keyframes initialAnim {
   0% {
     transform: translateY(20vh);

@@ -1,7 +1,6 @@
 const coinSelect = document.getElementById("coin");
 const nameCoin = document.querySelector(".viewValue__currentMoneyValue");
 const inputValue = document.getElementById("value");
-const buttomCalculate = document.querySelector(".calculate");
 const result = document.querySelector(".changeAndView__moneyValue");
 
 let currentValue = 0; // Valor atual da moeda selecionada
@@ -12,7 +11,6 @@ let valueMaxInput = 10000000000;
 coinSelect.addEventListener("change", API); // Atualiza API
 coinSelect.addEventListener("change", UpdateSig); // Atualiza representação de moedas
 
-buttomCalculate.addEventListener("click", Calculator);
 window.addEventListener("keyup", Calculator);
 
 const urls = {
@@ -65,7 +63,7 @@ function Calculator(event) {
             total = total.toFixed(2);
         }
         if (total >= valueMaxInput) {
-            result.style.fontSize = "1.5vw";
+            result.style.fontSize = "1rem";
         }
         UpdateSig();
     }
